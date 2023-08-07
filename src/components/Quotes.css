@@ -1,0 +1,22 @@
+#author {
+  margin-left: auto;
+  font-size: 1rem;
+  /* animation: fadeIN 5s; */
+  animation: animate 2s;
+  font-style: italic;
+}
+#text {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  animation: animate 2s;
+  /* animation: fadeIN 5s ; */
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "../src/App.css";
+import QuotesBox from "./components/QuotesBox";
 
-function App() {
+export const getRandomColor = () => {
+  const red = Math.floor(Math.random() * 168);
+
+  const blue = Math.floor(Math.random() * 168);
+  const green = Math.floor(Math.random() * 168);
+  return `rgb(${red},${green},${blue})`;
+};
+
+const App = () => {
+  const [randomColor, setRandomColor] = useState(getRandomColor());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div 
+      style={{ backgroundColor: randomColor, transition: "all 1s" }}
+      className="container"
+    >
+      <QuotesBox setRandomColor={setRandomColor} randomColor={randomColor} />
     </div>
   );
-}
+};
 
 export default App;

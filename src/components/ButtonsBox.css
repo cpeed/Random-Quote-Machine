@@ -1,0 +1,21 @@
+.buttons-container {
+  display: flex;
+  justify-items: space-between;
+  gap: 0.35rem;
+}
+.buttons-container :last-child {
+  margin-left: auto;
+}
+.button {
+  padding: 0.7rem 0.9rem;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+#brand {
+  font-size: 1.3rem;
+}
+.button:hover {
+  opacity: 0.8;
+}
